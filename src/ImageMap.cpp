@@ -9,8 +9,7 @@ ImageMap::ImageMap( cv::Mat mapMat )
 {
 	imgBinary( mapMat );
 	thinning(mapMat);
-	cv::imshow("skeleton", mapMat);
-
+	cv::imshow("picas", mapMat);
 }
 
 void ImageMap::grayScale( cv::Mat& mapMat )
@@ -24,7 +23,7 @@ void ImageMap::imgBinary( cv::Mat& mapMat )
 	//cv::Mat dstDilate;
 	//cv::Mat dstErode;
 	grayScale(mapMat);
-	cv::threshold(mapMat, mapMat, 240, 250, cv::THRESH_BINARY );
+	cv::threshold(mapMat, mapMat, 240, 250, cv::THRESH_BINARY_INV );
 	cv::imshow("dif", mapMat);
 }
 
