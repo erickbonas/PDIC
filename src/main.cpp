@@ -10,7 +10,8 @@ using namespace cv;
 int main( int argc, char** argv )
 {
 	cv::Mat image;
-	image = imread( "data/img/rua.png", 1 );
+	image = imread( "data/img/cidadeUniversitaria2.png", 1 );
+	//image = imread( "data/img/bonas3.png", 1 );
 
 	//std::list< cv::Mat > lista;
 	//lista.push_back( image );
